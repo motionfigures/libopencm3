@@ -85,6 +85,22 @@ const struct rcc_clock_scale rcc_hse8mhz_configs[] = {
 	}
 };
 
+const struct rcc_clock_scale rcc_hse16mhz_configs[] = {
+	{
+		.pllsrc = RCC_CFGR_PLLSRC_HSE_PREDIV,
+		.pllmul = RCC_CFGR_PLLMUL_MUL9,
+		.plldiv = RCC_CFGR2_PREDIV_DIV2,
+		.usbdiv1 = false,
+		.flash_waitstates = 2,
+		.hpre = RCC_CFGR_HPRE_DIV_NONE,
+		.ppre1 = RCC_CFGR_PPRE1_DIV_2,
+		.ppre2 = RCC_CFGR_PPRE2_DIV_NONE,
+		.ahb_frequency = 72e6,
+		.apb1_frequency = 36e6,
+		.apb2_frequency = 72e6,
+	}
+};
+
 void rcc_osc_ready_int_clear(enum rcc_osc osc)
 {
 	switch (osc) {

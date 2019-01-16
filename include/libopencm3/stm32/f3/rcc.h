@@ -422,6 +422,10 @@ enum rcc_clock_hse8 {
 	RCC_CLOCK_HSE8_72MHZ,
 	RCC_CLOCK_HSE8_END
 };
+enum rcc_clock_hse16 {
+	RCC_CLOCK_HSE16_72MHZ,
+	RCC_CLOCK_HSE16_END
+};
 
 
 struct rcc_clock_scale {
@@ -441,6 +445,7 @@ struct rcc_clock_scale {
 
 extern const struct rcc_clock_scale rcc_hsi_configs[RCC_CLOCK_HSI_END];
 extern const struct rcc_clock_scale rcc_hse8mhz_configs[RCC_CLOCK_HSE8_END];
+extern const struct rcc_clock_scale rcc_hse16mhz_configs[RCC_CLOCK_HSE16_END];
 
 enum rcc_osc {
 	RCC_PLL, RCC_HSE, RCC_HSI, RCC_LSE, RCC_LSI
