@@ -306,7 +306,7 @@ void adc_clear_eoc_sequence_flag(uint32_t adc)
  * The ADC clock taken from the many sources.
  *
  * @param[in] adc Unsigned int32. ADC base address (@ref adc_reg_base)
- * @param[in] prescale Unsigned int32. Prescale value (@ref adc_api_clksource)
+ * @param[in] source Unsigned int32. Clock source value (@ref adc_api_clksource)
  */
 
 void adc_set_clk_source(uint32_t adc, uint32_t source)
