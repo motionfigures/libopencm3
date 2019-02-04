@@ -150,6 +150,30 @@ void usart_disable_halfduplex(uint32_t usart)
 }
 
 /*---------------------------------------------------------------------------*/
+/** @brief USART Enable Overrun Detection
+
+ This bit field can only be written when the USART is disabled.
+
+ @param[in] usart USART block register address base @ref usart_reg_base
+ */
+void usart_enable_overrun_detection(uint32_t usart)
+{
+	USART_CR3(usart) &= ~USART_CR3_OVRDIS;
+}
+
+/*---------------------------------------------------------------------------*/
+/** @brief USART Disable Overrun Detection
+
+ This bit field can only be written when the USART is disabled.
+
+ @param[in] usart USART block register address base @ref usart_reg_base
+ */
+void usart_disable_overrun_detection(uint32_t usart)
+{
+	USART_CR3(usart) |= USART_CR3_OVRDIS;
+}
+
+/*---------------------------------------------------------------------------*/
 /** @brief USART Set receiver timeout value
 
  Sets the receive timeout value in terms of number of bit duration.

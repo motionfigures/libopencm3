@@ -623,6 +623,8 @@ void usart_enable_rx_inversion(uint32_t usart);
 void usart_disable_rx_inversion(uint32_t usart);
 void usart_enable_halfduplex(uint32_t usart);
 void usart_disable_halfduplex(uint32_t usart);
+void usart_enable_overrun_detection(uint32_t usart);
+void usart_disable_overrun_detection(uint32_t usart);
 
 void usart_set_rx_timeout_value(uint32_t usart, uint32_t value);
 void usart_enable_rx_timeout(uint32_t usart);
